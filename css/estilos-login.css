@@ -1,0 +1,116 @@
+﻿body {
+    background-color: #F4F3EE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    background: #f4f3ee;
+    padding: 45px; 
+    width: 500px; 
+    border: 3px solid #00A7E1;
+    border-radius: 35px;
+    text-align: center;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+.iniciarSesion {
+    font-family: "Orbitron", sans-serif;
+    color: #FF1654;
+    font-size: 28px;
+}
+
+.login-box input[type="email"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 16px; 
+    margin: 12px 0;
+    border: 2px solid #00A7E1;
+    border-radius: 35px;
+    box-sizing: border-box;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 16px; 
+}
+
+.password-container {
+    position: relative;
+}
+
+.login-box a {
+    display: block;
+    text-align: left;
+    margin-bottom: 15px;
+    font-size: 16px; 
+    color: #FF1654;
+    text-decoration: none;
+}
+
+.login-box input:focus {
+    border-color: #FF1654;
+    outline: none;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+.login-box a:hover {
+    text-decoration: underline;
+    color: #00A7E1;
+}
+
+.login-box button {
+    background-color: #FF1654;
+    color: #F4F3EE;
+    font-weight: bold;
+    border: none;
+    padding: 18px; 
+    width: 60%; 
+    border-radius: 35px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-family: "Orbitron", sans-serif;
+    font-size: 18px; 
+}
+
+.login-box button:hover {
+    background-color: #00A7E1;
+    color: #F4F3EE;
+    border-radius: 35px;
+}
+
+.register {
+    font-size: 16px; 
+    color: #070600;
+}
+
+.register a {
+    font-weight: bold;
+    color: #ff1654;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+}
+
+.register a:hover {
+    text-decoration: underline;
+    color: #00A7E1;
+}
+
+.terms {
+    font-size: 14px; 
+    color: #070600;
+    margin-top: 15px;
+}
+
+.terms a {
+    color: #FF1654;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+    color: #00A7E1;
+}

@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title></title>
+<link rel="stylesheet" href="../css/estilos-datos-personales.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+  <!-- Bloque Mi usuario -->
+  <div class="contenedor">
+    <nav class="breadcrumb">
+      <a href="#">Mi cuenta</a> &gt; <span>Mi usuario</span>
+    </nav>
+
+    <h2>Mi usuario</h2>
+
+    <form class="formulario" novalidate>
+      <!-- Email -->
+      <label for="email">Email principal</label>
+      <input type="email" id="email" name="email" placeholder="@gmail.com" required>
+
+      <button type="submit" class="btn">Guardar cambios</button>
+
+      <!-- Contraseña -->
+      <div>
+        <div style="flex:1;">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" minlength="6" disabled value="******">
+        </div>
+        <button type="button" class="btn-secundario">CAMBIAR</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Bloque Datos personales -->
+  <div class="contenedor">
+    <nav class="breadcrumb">
+      <a href="#">Mi cuenta</a> &gt; <span>Datos Personales</span>
+    </nav>
+
+    <h2>Datos personales</h2>
+
+    <form class="formulario" novalidate>
+      <div class="fila">
+        <div>
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div>
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" name="apellido" required>
+        </div>
+      </div>
+
+      <div class="fila">
+        <div>
+          <label for="tipo">Tipo</label>
+          <select id="tipo" name="tipo" required>
+            <option value="" disabled selected>Seleccione...</option>
+            <option value="dni">DNI</option>
+            <option value="pasaporte">Pasaporte</option>
+            <option value="lc">Libreta Cívica</option>
+          </select>
+        </div>
+        <div>
+          <label for="documento">Número de documento</label>
+          <input type="number" id="documento" name="documento" min="1000000" max="99999999" required>
+        </div>
+        <div>
+          <label for="fecha">Fecha de nacimiento</label>
+          <input type="date" id="fecha" name="fecha" required>
+        </div>
+      </div>
+
+      <div class="fila">
+        <div>
+          <label for="telefono">Teléfono celular</label>
+          <input type="tel" id="telefono" name="telefono" 
+                 pattern="[0-9]{10}" 
+                 placeholder="Ej: 1122334455" required>
+        </div>
+        <div>
+          <label for="email-sec">Email secundario</label>
+          <input type="email" id="email-sec" name="email-sec">
+        </div>
+      </div>
+
+      <button type="submit" class="btn">Guardar cambios</button>
+    </form>
+  </div>
+</body>
+</html>
