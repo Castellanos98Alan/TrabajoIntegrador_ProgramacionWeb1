@@ -11,14 +11,13 @@
    background-color: lime;
 }
 
-#seccion-categoria {
+/* parte trasera de las categorias*/
+.seccion-categoria {
    min-height: 720px;
    background-color: orange;
 }
 
-.articulo-categoria {
-   border: solid 3px gray;
-}
+
 
 #footer-principal {
    background-color: blue;
@@ -98,9 +97,7 @@
    background-color: orange;
 }
 
-.articulo-categoria {
-   border: solid 3px gray;
-}
+
 
 #footer-principal {
    background-color: blue;
@@ -112,29 +109,69 @@
    height:100px;
 }
 
-.item-valor-portada{
-   width: 250px;
-   height: 325px;
-   border: 2px solid  #00a7e1;
-   border-radius: 15px;
-   display: flex;
- justify-content: left;
-  align-items: right;
-   
-}
 
+
+
+
+
+/* CONTEINER DE LAS CATEGORIAS*/
 .articulo-categoria{
-   background-color: #f4f3ee;
-   
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
+/*TITULOS DE LOS VIDEOJUEGOS */
 .item-valor-nombre{
    font-family: "IBM Plex Sans", sans-serif;
    padding: 15px;
    margin: 20px auto;
-border: 2px #00a7e1 solid ;
+border: 2px #3c00e1 solid ;
 display: flex;
  justify-content: center;
   align-items: center;
    height: 10px;
+  font-size: 28px;
+  font-weight: bold;
 }
+/*AUTOR DEL VIDEOJUEGO*/
+.item-valor-autor{
+display: flex;
+justify-content: center;
+align-items: center;
+text-decoration: underline;
+color: #00a7e1 ;
+}
+
+/* IMAGEN PORTADA VIDEOJUEGOS*/
+.item-valor-portada{
+   width: 280px;
+   height: 325px;
+   border: 2px solid  #c9148d;
+   border-radius: 15px;
+   display: block;
+   margin: auto;
+
+}
+
+/*Descripcion de los VIDEOJUEGOS*/
+.item-valor-descripcion{
+margin: 20px 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* RAITING de los videojuegos*/
+.item-valor-rating{
+color: #0A0A0A;
+
+}
+/* CONTEINER de DETALLES DEL ARTICULO*/
+.detalle-articulo{
+   background-color:  #f4f3ee;;
+}
+
+.header-articulo{
+   background-color: #00a7e1;
+}
+
