@@ -57,8 +57,8 @@
 
 .fila {
   display: flex;
-  gap: 15px;
-  margin-bottom: 10px;
+  gap: 30px;
+  margin-bottom: 15px;
 }
 
 .fila div {
@@ -77,13 +77,13 @@
     color: #F4F3EE;
     font-weight: bold;
     border: none;
-    padding: 18px; 
+    padding: 16px; 
     width: 230px; 
-    border-radius: 35px;
+    border-radius: 30px;
     cursor: pointer;
     margin-bottom: 15px;
    
-    font-size: 16px; 
+    font-size: 12px; 
 }
 
 .btn:hover {
