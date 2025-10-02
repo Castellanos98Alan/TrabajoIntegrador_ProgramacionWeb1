@@ -65,13 +65,8 @@
   flex: 1;
 }
 
-.password {
-  display: flex;
-  align-items: flex-end;
-  gap: 10px;
-}
 
-.btn {
+.boton {
     font-family: "Orbitron", sans-serif;
    background-color: #FF1654;
     color: #F4F3EE;
@@ -86,13 +81,13 @@
     font-size: 12px; 
 }
 
-.btn:hover {
+.boton:hover {
    background-color: #00A7E1;
     color: #F4F3EE;
     border-radius: 35px;
 }
 
-.btn-secundario {
+.boton-secundario {
   background: #f1f1f1;
   color: #333;
   padding: 9px 14px;
