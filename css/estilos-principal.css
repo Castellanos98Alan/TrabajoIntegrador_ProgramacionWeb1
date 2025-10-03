@@ -1,4 +1,4 @@
-﻿@import url("temas-colores-fuentes.css"); 
+﻿/*@import url("temas-colores-fuentes.css"); */
 
 * {
    margin: 0;
@@ -63,6 +63,8 @@
 #navegacion-categoria {
    background-color: var(--dark-color-acento-1);
    font-family: Oxanium;
+   color: var(--light-color-acento-3);
+   font-size: 18px;
    padding: 20px;
    justify-content: center;
    display: flex;
@@ -72,14 +74,15 @@
          #1f1e1e 50%,
          #ff165467 150%);
 }
+
 #navegacion-categoria a {
    color: var(--light-color-acento-3);
    font-size: 18px;
    font-weight: 900;
-   font-style: oblique;
-   text-transform: uppercase;
-   font-style: uppercase;
+   
 }
+
+
 /* Conteiner de todas las categorias*/
 #seccion-categoria {
    display: grid;
