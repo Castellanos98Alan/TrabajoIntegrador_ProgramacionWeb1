@@ -1,4 +1,4 @@
-﻿@import url("temas-colores-fuentes.css"); 
+﻿/*@import url("temas-colores-fuentes.css"); */
 
 * {
    margin: 0;
@@ -6,18 +6,71 @@
 
 }
 
+/* Aplicar fondo al body */
+body {
+   position: relative;
+   background: linear-gradient(135deg, #0a0e27 0%, #1a1535 50%, #0d1b2a 100%);
+   overflow-x: hidden;
+}
+
+/* Grid animado de fondo */
+body::before {
+   content: '';
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image:
+      linear-gradient(rgba(99, 102, 241, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99, 102, 241, 0.08) 1px, transparent 1px);
+   background-size: 50px 50px;
+   animation: gridMove 20s linear infinite;
+   perspective: 1000px;
+   transform: rotateX(60deg) scale(2);
+   transform-origin: center;
+   z-index: -1;
+   pointer-events: none;
+}
+
+@keyframes gridMove {
+   0% {
+      background-position: 0 0;
+   }
+
+   100% {
+      background-position: 50px 50px;
+   }
+}
+
+/* Orbes de luz flotantes */
+body::after {
+   content: '';
+   position: fixed;
+   width: 400px;
+   height: 400px;
+   background: radial-gradient(circle, rgba(139, 92, 246, 0.3), transparent);
+   border-radius: 50%;
+   filter: blur(80px);
+   bottom: 10%;
+   right: 15%;
+   animation: float 8s ease-in-out infinite;
+   animation-delay: 2s;
+   z-index: -1;
+   pointer-events: none;
+}
+
+/*ENCABEZADO PRINCIPAL*/
 #encabezado-principal {
-   background-color: var(--dark-color-fondo);
    height: 150px;
    display: flex;
    justify-content: space-between;
    align-items: center;
    padding: 0 10px;
-   background-image: linear-gradient(to bottom,
-         #0A0A0A 0%,
-         #1f1e1e 50%,
-         #ff165467 120%);
-
+   background-image: linear-gradient(to bottom left,
+         rgba(10, 10, 10, 0.95) 0%,
+         rgba(31, 30, 30, 0.9) 50%,
+         rgba(255, 22, 84, 0.3) 150%);
 }
 
 #encabezado-principal-logo img {
@@ -34,7 +87,6 @@
    padding: 15px;
    height: 50px;
    width: 600px;
-   border: 1.9px solid var(--dark-color-acento-1);
    border-radius: 100px;
    font-family: Orbitron;
    outline: none;
@@ -42,8 +94,7 @@
 
 #encabezado-principal-buscador input:hover {
    text-decoration: none;
-   border: 3px solid var(--dark-color-acento-2);
-   box-shadow: 2px 2px 2px 1px (--light-color-acento-3);
+   border: 3px solid #00D9FF;
 }
 
 #encabezado-principal-buscador input:focus {
@@ -54,84 +105,108 @@
    position: absolute;
    top: 5px;
    right: 10px;
-   height: 40px;
-   width: 40px;
    cursor: pointer;
    padding: 0;
 }
 
+/*NAVEGACION CATEGORIAS RPG SHOOTER ETC*/
 #navegacion-categoria {
-   background-color: var(--dark-color-acento-1);
    font-family: Oxanium;
    padding: 20px;
    justify-content: center;
    display: flex;
    gap: 100px;
-   background-image: linear-gradient(to bottom left ,
-         #0A0A0A 0%,
-         #1f1e1e 50%,
-         #ff165467 150%);
+   background-image: linear-gradient(to top left,
+         rgba(10, 10, 10, 0.9) 0%,
+         rgba(31, 30, 30, 0.85) 50%,
+         rgba(255, 22, 84, 0.3) 150%);
 }
-#navegacion-categoria a {
-   color: var(--light-color-acento-3);
-   font-size: 18px;
+
+.tab-categoria {
+   color: white;
+   font-size: 20px;
    font-weight: 900;
-   font-style: oblique;
-   text-transform: uppercase;
-   font-style: uppercase;
+   text-decoration: none;
 }
-/* Conteiner de todas las categorias*/
+.tab-categoria:hover {
+   color: #FF1654;
+   text-decoration: underline;
+
+}
+
+/*Encabezado CARRUZEL*/
+#encabezado-secundario {
+   height: 500px;
+}
+
+/* Container de todas las categorias*/
 #seccion-categoria {
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
    grid-template-rows: 1fr 1fr 1fr;
    min-height: 720px;
-   background-color: var(--dark-color-acento-1);
-   gap: 20px;
-   padding: 50px;
- background-image: linear-gradient(to left,
-         #0A0A0A 0%,
-         #1f1e1e 50%,
-         #ff165467 150%);
-}
-
-#encabezado-secundario {
-   height: 500px;
+   gap: 35px;
+   padding: 70px;
+   background-image: linear-gradient(to left,
+         rgba(10, 10, 10, 0.85) 0%,
+         rgba(31, 30, 30, 0.8) 50%,
+         rgba(255, 22, 84, 0.25) 150%);
 }
 
 
-/* CONTEINER INDIVIDUAL DE LAS CATEGORIAS*/
+.container-titulo-seccion-categoria{
+   background-image: linear-gradient(to left,
+         rgba(10, 10, 10, 0.85) 0%,
+         rgba(31, 30, 30, 0.8) 50%,
+         rgba(255, 22, 84, 0.25) 150%);
+   padding: 40px 20px 0px;
+   text-decoration: none;
+}
+.seccion-categoria-titulo{
+    margin-left: 60px;
+    color: white;
+    font-family: Oxanium;
+}
+.seccion-categoria-titulo:hover{
+    color: #8B5CF6;
+  
+}
+
+
+
+/* CONTAINER INDIVIDUAL DE LAS CATEGORIAS*/
 .articulo-categoria {
    max-width: 800px;
    margin: 0 auto;
    padding: 20px;
-   border: 3px var(--light-color-acento-3)  solid;
-   border-radius: 40px;
+   border: 3px #ffffff solid;
+   border-image: linear-gradient(45deg,#00D9FF , #FF1654, #8B5CF6) 3;
 }
 
-.articulo-categoria:hover {
-  transform: scale(1.03);
-   box-shadow: 2px 2px 2px 1px var(--light-color-acento-3);
- 
+.articulo-categoria:hover, .item-valor-nombre:hover{
+   transform: scale(1.03);
+   border: 2px solid #00D9FF ;
+   box-shadow: 2px 2px 2px 1px #00D9FF;
+
 }
+
 /*TITULOS DE LOS VIDEOJUEGOS */
 .item-valor-nombre {
    font-family: "IBM Plex Sans", sans-serif;
-   font-style: italic;
+   font-style:oblique;
    padding: 15px;
    margin: 20px auto;
-   color: var(--dark-color-acento-3);
-   border: 2px var(--light-color-acento-3) solid;
+   color: #8B5CF6;
    display: flex;
    justify-content: center;
    align-items: center;
    height: 10px;
-   font-size: 16px;
-   font-weight: bold;
-    background-image: linear-gradient(to left,
-         #0A0A0A 0%,
-         #1f1e1e 50%,
-         #ff165467 150%);
+   font-size: 20px;
+   font-weight: 800;
+   background-image: linear-gradient(to left,
+         rgba(10, 10, 10, 0.466) 0%,
+         rgba(31, 30, 30, 0.8) 50%,
+         rgba(255, 22, 84, 0.116) 150%);
 }
 
 
@@ -142,7 +217,7 @@
    align-items: center;
    text-decoration: underline;
    color: #ffffff;
-   
+
 }
 
 /* IMAGEN PORTADA VIDEOJUEGOS*/
@@ -166,19 +241,17 @@
 /* RAITING de los videojuegos*/
 .item-valor-rating {
    color: #0A0A0A;
-   
+
 
 }
 
 /* CONTEINER de DETALLES DEL ARTICULO*/
-.detalle-articulo {
-  
-}
+
 
 /* PArte de arriba del articulo*/
-.header-articulo p{
+.header-articulo p {
    padding: 20px;
-  
+
 }
 
 /*Raiting de los videojuegos*/
@@ -190,7 +263,7 @@
 }
 
 #footer-principal {
-   color: var(--dark-color-acento-3);
+   color: #FF1654;
    background-color: var(--dark-color-fondo);
    font-size: 20px;
    height: 150px;
@@ -198,34 +271,37 @@
    justify-content: space-between;
    align-items: center;
    padding: 0 10px;
-    background-image: linear-gradient(
-        to top, 
-        #0A0A0A 0%,
-        #1f1e1e 50%,
-        #ff165467 120% 
-    );
+   background-image: linear-gradient(to top,
+        rgba(10, 10, 10, 0.95) 0%,
+        rgba(31, 30, 30, 0.9) 50%,
+        rgba(255, 22, 84, 0.3) 120%);
 }
+
 #footer-principal a {
    color: #f4f3ee;
    text-decoration: none;
    transition: color 0.3s;
 }
 
-#footer-principal-izquierda{
+#footer-principal-izquierda {
    text-align: left;
 }
-#footer-principal-centro{
+
+#footer-principal-centro {
    text-align: center;
    font-family: Oxanium;
 }
-#footer-principal-derecha{
+
+#footer-principal-derecha {
    text-align: right;
 }
+
 #footer-principal a:hover {
-   color: #ff1654; 
+   color: #ff1654;
 }
 
 #qr-code {
    width: 100px;
    height: 100px;
 }
+
