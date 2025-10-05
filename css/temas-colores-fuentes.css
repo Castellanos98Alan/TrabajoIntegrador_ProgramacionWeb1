@@ -7,14 +7,14 @@
 :root {
    --light-color-texto: #070600;
    --light-color-fondo: #f4f3ee;
-   --light-color-acento-1: #ff1654;
-   --light-color-acento-2: #00a7e1;
-   --light-color-acento-3: #89fc00;
+   --light-color-acento-1: #FF1491;
+   --light-color-acento-2: #00D9FF;
+   --light-color-acento-3: #8B5CF6;
    --dark-color-texto: #f4f3ee;
    --dark-color-fondo: #070600;
-   --dark-color-acento-1: #ff1654;
+   --dark-color-acento-1: #FF1491;
    --dark-color-acento-2: #00a7e1;
-   --dark-color-acento-3: #89fc00;
+   --dark-color-acento-3: #8B5CF6;
 }
 
  .light-theme {
