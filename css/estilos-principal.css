@@ -138,8 +138,7 @@ body::after {
 /* Container de todas las categorias*/
 #seccion-categoria {
    display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   grid-template-rows: 1fr 1fr 1fr;
+   grid-template-columns: repeat(3, 1fr);
    min-height: 720px;
    gap: 35px;
    padding: 70px;
@@ -180,6 +179,7 @@ body::after {
    border-image: linear-gradient(45deg,#ff8800 , var(--light-color-acento-1), #8B5CF6) 3;
    background-color: rgba(10, 10, 30, 0.6);
    box-shadow: 0 0 15px rgba(255, 20, 147, 0.3);
+   
 }
 
 .articulo-categoria:hover{
@@ -226,22 +226,102 @@ body::after {
 
 }
 
-/*Descripcion de los VIDEOJUEGOS*/
+/* Descripción de los VIDEOJUEGOS */
 .item-valor-descripcion {
-   margin: 20px 0;
-   font-size: 16px;
-   line-height: 1.6;
-   color: gray;
+  margin: 20px 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #cfcfcf;
+  text-align: justify;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 3px solid #ff007f; 
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 0, 127, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* RAITING de los videojuegos*/
+.item-valor-descripcion:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(255, 0, 127, 0.6);
+}
+
+/* RATING de los videojuegos */
 .item-valor-rating {
-   color: #0A0A0A;
-
-
+   text-align: center;
+  color: #ffdf00;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-shadow: 0 0 10px #ffdf00;
 }
 
-/* CONTEINER de DETALLES DEL ARTICULO*/
+
+
+
+
+/* CONTENEDOR de DETALLES DEL ARTÍCULO */
+.detalle-articulo {
+  background: linear-gradient(135deg, #1c1c1c, #292929);
+  color: #f5f5f5;
+  min-height: 3em;
+  padding: 20px;
+  border-radius: 12px;
+  border: 3px #ffffff solid;
+   border-image: linear-gradient(45deg,#ff8800 , var(--light-color-acento-1), #8B5CF6) 3;
+   background-color: rgba(10, 10, 30, 0.6);
+   box-shadow: 0 0 15px rgba(255, 20, 147, 0.3);
+  transition: 0.3s ease;
+}
+
+/* MUESTRA AL COLOCAR MOUSE EN DETALLES*/
+.detalle-articulo:hover {
+  border-color: #08d6fa;
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.5);
+}
+
+/*VALOR DE LOS CAMPOS ej MODO DE JUEGO*/
+.detalle-articulo h4 {
+  font-size: 17px;
+  color: #f7f7f7;
+  margin-bottom: 6px;
+  margin-top: 18px;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+  padding-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detalle-articulo p {
+  font-size: 15px;
+  color: #ddd;
+  margin: 4px 0 10px 10px;
+  padding-left: 5px;
+  border-left: 3px solid rgba(255, 0, 255, 0.3);
+  line-height: 1.5;
+  transition: 0.3s ease;
+}
+
+.detalle-articulo p:hover {
+  color: #fff;
+  border-left-color: #08d6fa
+}
+
+/* Espaciado general entre descripción y rating */
+.item-valor-descripcion,
+.item-valor-rating {
+  margin: 12px 0;
+}
+
+.item-valor-descripcion span,
+.item-valor-rating span {
+  color: #ffdf00;
+}
+
+
+
+
+
 
 
 /* PArte de arriba del articulo*/
@@ -250,13 +330,7 @@ body::after {
 
 }
 
-/*Raiting de los videojuegos*/
-.item-valor-rating {
-   text-align: center;
-   font-size: 18px;
-   margin-top: 15px;
-   color: gold;
-}
+
 
 #footer-principal {
    color: var(--light-color-acento-1);
@@ -300,22 +374,38 @@ body::after {
    width: 100px;
    height: 100px;
 }
-.seccion-categoria
 
 
-/* queries*/
-/* Tablets (por ejemplo, menos de 900px) */
-@media (max-width: 900px) {
-  .seccion-categoria {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+
+/* TABLET (menor a 1180) */
+@media screen and (max-width: 1180px) {
+  #seccion-categoria {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px; /* un poco menos de espacio */
+    padding: 50px 20px;
+  }
+  
+    #seccion-categoria img {
+    width: 100%;
+    height: auto;
   }
 }
 
-/* Celulares (menos de 600px) */
-@media (max-width: 600px) {
-  .seccion-categoria {
-    grid-template-columns: 1fr; /* 1 columna */
+/* CELULARES (menor a 750px) */
+@media screen and (max-width: 750px) {
+  #seccion-categoria {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px 15px;
+  }
+
+  
+
+  #seccion-categoria img {
+    width: 100%;
+    height: auto;
   }
 }
+
 
 
