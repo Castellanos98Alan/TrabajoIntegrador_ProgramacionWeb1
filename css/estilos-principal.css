@@ -177,14 +177,14 @@ body::after {
    margin: 0 auto;
    padding: 20px;
    border: 3px #ffffff solid;
-   border-image: linear-gradient(45deg,#00D9FF , var(--light-color-acento-1), #8B5CF6) 3;
+   border-image: linear-gradient(45deg,#ff8800 , var(--light-color-acento-1), #8B5CF6) 3;
    background-color: rgba(10, 10, 30, 0.6);
    box-shadow: 0 0 15px rgba(255, 20, 147, 0.3);
 }
 
 .articulo-categoria:hover{
    transform: scale(1.03);
-   border: 3px solid #00D9FF ;
+   border: 3px solid #08d6fa ;
  /*  border-image: linear-gradient(120deg,#00D9FF,var(--light-color-acento-1)) 2;*/
 }
 
@@ -300,4 +300,22 @@ body::after {
    width: 100px;
    height: 100px;
 }
+.seccion-categoria
+
+
+/* queries*/
+/* Tablets (por ejemplo, menos de 900px) */
+@media (max-width: 900px) {
+  .seccion-categoria {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  }
+}
+
+/* Celulares (menos de 600px) */
+@media (max-width: 600px) {
+  .seccion-categoria {
+    grid-template-columns: 1fr; /* 1 columna */
+  }
+}
+
 
