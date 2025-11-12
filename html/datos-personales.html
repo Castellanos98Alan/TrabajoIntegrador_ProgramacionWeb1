@@ -15,7 +15,7 @@
 
   <!-- Header principal -->
   <header id="encabezado-principal">
-    <a href="index.html" id="encabezado-principal-logo">
+   <a href="/index.html" id="encabezado-principal-logo">
       <img src="../assets/img/LogoRosaFluor.png" alt="Logo VideoGames">
     </a>
 
@@ -24,9 +24,9 @@
       <img src="../assets/img/LupaRosa.png" alt="Buscar">
     </div>
 
-    <a href="/perfil" title="Mi Perfil">
-      <img src="../assets/img/menu-rosa.png" alt="Icono de Perfil">
-    </a>
+      <a href="/html/login.html" title="Mi Perfil">
+         <img src="/assets/img/login_24dp_FF1491_FILL0_wght400_GRAD0_opsz24.png" alt="Icono de Perfil" class="img-login">
+      </a>
   </header>
   <!-- Bloque Mi usuario -->
   <main class="contenedores">
@@ -39,7 +39,7 @@
 
       <form class="formulario">
         <label for="email">Email principal</label>
-        <input type="email" id="email" name="email" placeholder="@gmail.com" required>
+        <input type="email" id="email" name="email" placeholder="@gmail.com" required class="input-email">
         <button type="submit" class="boton">Guardar cambios</button>
 
         <div class="fila">
@@ -76,10 +76,10 @@
           <div>
             <label for="tipo">Tipo</label>
             <select id="tipo" name="tipo" required>
-              <option value="" disabled selected>Seleccione...</option>
-              <option value="dni">DNI</option>
-              <option value="pasaporte">Pasaporte</option>
-              <option value="lc">Libreta Cívica</option>
+              <option value="" style="color:rgb(105, 105, 105)" disabled selected>Seleccione...</option>
+              <option value="dni" style="color:black">DNI</option>
+              <option value="pasaporte" style="color:black">Pasaporte</option>
+              <option value="lc" style="color:black">Libreta Cívica</option>
             </select>
           </div>
           <div>
