@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const emailInput = document.querySelector('input[type="email"]');
   const passwordInput = document.querySelector('input[type="password"]');
   const boton = document.querySelector('button[type="submit"]');
+  const mensajeError = document.getElementById('warnings');
 
   // Deshabilitar botón al inicio
   boton.disabled = true;
@@ -44,7 +45,29 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // LOCALSTORAGE - Iniciar sesión
+  function iniciarSesion(e) {
+    e.preventDefault();
+
+    const email = emailInput.value.trim();
+    const password = passwordInput.value.trim();
+
+    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    const usuarioEncontrado = usuarios.find(
+      (u) => u.email === email && u.password === password
+    );
+
+    if (!usuarioEncontrado) {
+      mensajeError.innerHTML = "Email o contraseña incorrectos";
+      return;
+    }
+
+    window.location.href = "../index.html";
+  }
+
   // Escuchar cambios en los inputs
   emailInput.addEventListener("input", verificarCampos);
   passwordInput.addEventListener("input", verificarCampos);
+  boton.addEventListener("click", iniciarSesion);
 })   

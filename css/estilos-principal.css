@@ -106,9 +106,16 @@ body::after {
    margin-left: 10px;
 }
 
-.img-login {
+.img-login, .img-ajustes {
    width: 40px;
    transition: transform 0.3s;
+
+}
+
+.encabezado-principal-derecha {
+   display: flex;
+   align-items: center;
+   gap: 30px;
 }
 
 #encabezado-principal a img:hover {
