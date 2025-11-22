@@ -69,6 +69,24 @@ if (buscador) {
 }
 
 
+document.querySelectorAll('.item-valor-rating').forEach(el => {
+    // Obtiene el texto completo, ej: "Rating ITEM 3"
+    const texto = el.textContent.trim();
 
+    // Busca el último número en la línea (1–5)
+    const match = texto.match(/(\d)$/);
+    if (!match) return;
+
+    const rating = parseInt(match[1]);
+
+    // Genera los mandos 🎮
+    let mandos = "";
+    for (let i = 0; i < rating; i++) {
+        mandos += "🎮";
+    }
+
+    // Reemplaza el número por los mandos
+    el.innerHTML = texto.replace(/\d$/, mandos);
+});
 
 

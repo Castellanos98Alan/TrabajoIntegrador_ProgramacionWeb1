@@ -24,9 +24,18 @@
          <img src="../assets/img/LupaRosa.png" alt="Buscar">
       </div>
 
-      <a href="/html/login.html" title="Mi Perfil">
-         <img src="assets/img/login_24dp_FF1491_FILL0_wght400_GRAD0_opsz24.png" alt="Icono de Perfil" class="img-login">
-      </a>
+      <div class="encabezado-principal-derecha">
+         <a href="/html/datos-personales.html" title="Icono Ajustes">
+            <img src="" alt="Icono de Ajustes" class="img-ajustes" />
+         </a>
+
+         <!-- agregar icono favoritos -->
+
+         <a href="/html/login.html" title="Mi Perfil">
+            <img src="assets/img/login_24dp_FF1491_FILL0_wght400_GRAD0_opsz24.png" alt="Icono de Perfil"
+               class="img-login" />
+         </a>
+      </div>
    </header>
    <!-- Navegacion entre Categorias -->
    <main>
@@ -37,9 +46,27 @@
          <a href="#" id="tab-categoria-4" class="tab-categoria">Plataformas</a>
          <a href="#" id="tab-categoria-5" class="tab-categoria">Deporte</a>
       </nav>
+      <!-- Carrousel -->
       <header id="encabezado-secundario">
-         <h1>ENCABEZADO SECUNDARIO --- CARRUSEL</h1>
+         <div class="carrusel-contenedor">
+
+            <div class="atras" id="atras-btn">
+               <img src="assets/img/flecha-atras.svg" alt="atras" loading="lazy">
+            </div>
+
+            <div class="adelante" id="adelante-btn">
+               <img src="assets/img/flecha-adelante.svg" alt="adelante" loading="lazy">
+            </div>
+
+            <div class="carrusel-imagenes" id="carrusel-imagenes-dinamicas">
+            </div>
+         </div>
+
+         <div class="puntos" id="puntos"></div>
+
+         <script type="module" src="js/carrusel.js"></script>
       </header>
+      
       <section id="seccion-filtros">
       </section>
 

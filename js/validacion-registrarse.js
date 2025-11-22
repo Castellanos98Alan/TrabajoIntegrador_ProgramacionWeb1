@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const emailInput = document.querySelector('input[type="email"]');
     const passwordInput = document.querySelector('input[type="password"]');
     const boton = document.querySelector('button[type="submit"]');
+    const mensajeError = document.getElementById('warnings');
 
     // Deshabilitar el botón inicialmente
     boton.disabled = true;
@@ -43,7 +44,31 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // LocalStorage del usuario
+    function guardarRegistro(e) {
+        e.preventDefault();
+
+        const email = emailInput.value.trim();
+        const password = passwordInput.value.trim();
+
+        // Obtener lista de usuarios o crear una vacía
+        const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+        const existe = usuarios.some((u) => u.email === email);
+        if (existe) {
+            mensajeError.innerHTML = "El usuario ya está registrado. Por favor, inicie sesión.<br>";
+            return;
+        }
+
+        // Guardar usuario
+        usuarios.push({ email, password });
+        localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+        window.location.href = "login.html";
+  }
+
     // Escuchar cambios en los inputs
     emailInput.addEventListener("input", verificarCampos);
     passwordInput.addEventListener("input", verificarCampos);
+    boton.addEventListener("click", guardarRegistro);
 })

@@ -172,6 +172,12 @@ body::after {
     position: relative;
 }
 
+.warnings {
+    color: #FF1654;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
 .register-box a {
     display: block;
     text-align: left;
