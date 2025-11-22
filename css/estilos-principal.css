@@ -540,3 +540,29 @@ body::after {
       height: auto;
    }
 }
+
+/*estilo categoria 2*/
+.categoria2:hover{
+   color: #08fa51;
+    transform: scale(1.03);
+   border: 3px solid #08fa51;
+    box-shadow: 0 0 20px #08fa51;
+}
+.categoria3:hover{
+   color: #fa088d;
+    transform: scale(1.03);
+   border: 3px solid #fa08a9;
+    box-shadow: 0 0 20px #fa08a9;
+}
+.categoria4:hover{
+   color: #faea08;
+    transform: scale(1.03);
+   border: 3px solid #faea08;
+    box-shadow: 0 0 20px #faea08;
+}
+.categoria5:hover{
+   color: #fa0808;
+    transform: scale(1.03);
+   border: 3px solid #fa0808;
+    box-shadow: 0 0 20px #fa0808;
+}

@@ -89,4 +89,39 @@ document.querySelectorAll('.item-valor-rating').forEach(el => {
     el.innerHTML = texto.replace(/\d$/, mandos);
 });
 
+const categoriaSurvival = document.getElementById("tab-categoria-2");
+const categoriaShooter = document.getElementById("tab-categoria-3");
+
+const categoria = document.querySelectorAll(".tab-categoria");
+
+
+const tabs = document.querySelectorAll(".tab-categoria");
+
+   tabs.forEach((tab, index) => {
+      tab.addEventListener("click", e => {
+         e.preventDefault();
+
+         // Quita las clases de hover anteriores
+           articulos.forEach(a => {
+           a.classList.remove("categoria2", "categoria3","categoria4","categoria5");
+         });
+
+         // Según la categoría seleccionada aplica un estilo nuevo
+         if (index === 1) {  // Survival
+            articulos.forEach(a => a.classList.add("categoria2"));
+         }
+         if (index === 2) {  // Shooter
+            articulos.forEach(a => a.classList.add("categoria3"));
+         }
+         if (index === 3) {  // Plataforma
+            articulos.forEach(a => a.classList.add("categoria4"));
+         }
+         if (index === 4) {  // Deporte
+            articulos.forEach(a => a.classList.add("categoria5"));
+         }
+      });
+   });
+
+
+
 
