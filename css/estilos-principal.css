@@ -1,0 +1,568 @@
+﻿/*@import url("temas-colores-fuentes.css"); */
+
+* {
+   margin: 0;
+   padding: 0;
+
+}
+
+/* Aplicar fondo al body */
+body {
+   position: relative;
+   background: linear-gradient(135deg, #0a0e27 0%, #1a1535 50%, #0d1b2a 100%);
+   overflow-x: hidden;
+}
+
+/* Grid animado de fondo */
+body::before {
+   content: '';
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image:
+      linear-gradient(rgba(99, 102, 241, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99, 102, 241, 0.08) 1px, transparent 1px);
+   background-size: 50px 50px;
+   animation: gridMove 20s linear infinite;
+   perspective: 1000px;
+   transform: rotateX(60deg) scale(2);
+   transform-origin: center;
+   z-index: -1;
+   pointer-events: none;
+}
+
+@keyframes gridMove {
+   0% {
+      background-position: 0 0;
+   }
+
+   100% {
+      background-position: 50px 50px;
+   }
+}
+
+/* Orbes de luz flotantes */
+body::after {
+   content: '';
+   position: fixed;
+   width: 400px;
+   height: 400px;
+   background: radial-gradient(circle, rgba(139, 92, 246, 0.3), transparent);
+   border-radius: 50%;
+   filter: blur(80px);
+   bottom: 10%;
+   right: 15%;
+   animation: float 8s ease-in-out infinite;
+   animation-delay: 2s;
+   z-index: -1;
+   pointer-events: none;
+
+}
+
+/*ENCABEZADO PRINCIPAL*/
+#encabezado-principal {
+   background: rgba(10, 10, 20, 0.7);
+   backdrop-filter: blur(10px);
+   border-bottom: 2px solid #FF1654;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px 40px;
+}
+
+#encabezado-principal-logo img {
+   width: 75px;
+   transition: transform 0.3s;
+}
+
+#encabezado-principal-logo img:hover {
+   transform: scale(1.1);
+}
+
+#encabezado-principal-buscador {
+   display: flex;
+   align-items: center;
+   background-color: rgba(255, 255, 255, 0.1);
+   border: 1.5px solid #FF1654;
+   border-radius: 35px;
+   padding: 10px 15px;
+   width: 40%;
+   transition: 0.3s;
+}
+
+#encabezado-principal-buscador input[type="search"] {
+   border: none;
+   outline: none;
+   flex: 1;
+   font-size: 16px;
+   color: white;
+   background: transparent;
+}
+
+#encabezado-principal-buscador img {
+   width: 25px;
+   margin-left: 10px;
+}
+
+.img-login, .img-ajustes {
+   width: 40px;
+   transition: transform 0.3s;
+
+}
+
+.encabezado-principal-derecha {
+   display: flex;
+   align-items: center;
+   gap: 30px;
+}
+
+#encabezado-principal a img:hover {
+   transform: scale(1.1);
+}
+
+
+/*NAVEGACION CATEGORIAS RPG SHOOTER ETC*/
+#navegacion-categoria {
+   font-family: Oxanium;
+   padding: 20px;
+   justify-content: center;
+   display: flex;
+   gap: 100px;
+   background: rgba(10, 10, 30, 0.425);
+   box-shadow: 0 0 15px rgba(255, 20, 147, 0.3);
+}
+
+.tab-categoria {
+   color: white;
+   font-size: 20px;
+   font-weight: 900;
+   text-decoration: none;
+}
+
+.tab-categoria:hover {
+   color: var(--light-color-acento-1);
+   text-decoration: underline;
+
+}
+
+/*Encabezado CARRUZEL*/
+#encabezado-secundario {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding: 40px;
+   height: 200px;
+}
+
+.carrusel-contenedor {
+   display: flex;
+   justify-content: flex-start;
+   position: relative;
+   width: 90%;
+   max-width: 900px;
+   height: 100%;
+   overflow: hidden;
+   box-shadow: 0 0 25px rgba(255, 20, 147, 0.6);
+}
+
+#carrusel-imagenes-dinamicas {
+   display: flex;
+   width: 500%;
+   height: 100%;
+   transition: all 0.6s ease-in-out;
+}
+
+.carrusel-item {
+   min-width: 25%;
+   height: 80%;
+   object-fit: contain;
+   background-color: #2f26605d;
+   margin-top: 10px;
+   margin-bottom: 10px;
+
+   border-radius: 10px;
+   transform: scale(0.85);
+   opacity: 0.6;
+   transition: all 0.6s ease-in-out;
+}
+
+.carrusel-item.activo {
+   transform: scale(1);
+   opacity: 2;
+   z-index: 2;
+   box-shadow: 0 8px 20px rgba(255, 20, 147, 0.8);
+
+}
+
+.atras,
+.adelante {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   z-index: 10;
+   cursor: pointer;
+   background: rgba(255, 22, 84, 0.9);
+   border-radius: 50%;
+   padding: 10px;
+   transition: background 0.3s;
+}
+
+.atras {
+   left: 10px;
+}
+
+.adelante {
+   right: 10px;
+}
+
+.atras img,
+.adelante img {
+   width: 20px;
+   height: 20px;
+}
+
+.puntos {
+   display: flex;
+   justify-content: center;
+   margin-top: 10px;
+   height: 15px;
+}
+
+.puntos p {
+   font-size: 2em;
+   line-height: 0.5;
+   margin: 0 5px;
+   color: rgba(255, 255, 255, 0.4);
+   cursor: pointer;
+   transition: color 0.3s;
+}
+
+.puntos p.bold {
+   color: #FF1673;
+   font-weight: bold;
+}
+
+/* Container de todas las categorias*/
+#seccion-categoria {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   min-height: 720px;
+   gap: 35px;
+   padding: 70px;
+   background-image: linear-gradient(to left,
+         rgba(10, 10, 10, 0.85) 0%,
+         rgba(31, 30, 30, 0.8) 50%,
+         rgba(255, 22, 84, 0.25) 150%);
+}
+
+
+.container-titulo-seccion-categoria {
+   background-image: linear-gradient(to left,
+         rgba(10, 10, 10, 0.85) 0%,
+         rgba(31, 30, 30, 0.8) 50%,
+         rgba(255, 22, 84, 0.25) 150%);
+   box-shadow: 0 0 15px rgba(255, 20, 147, 0.3);
+   padding: 40px 20px 0px;
+   text-decoration: none;
+}
+
+.seccion-categoria-titulo {
+   margin-left: 60px;
+   color: white;
+   font-family: Oxanium;
+}
+
+.seccion-categoria-titulo:hover {
+   color: #8B5CF6;
+
+}
+
+
+
+/* CONTAINER INDIVIDUAL DE LAS CATEGORIAS*/
+.articulo-categoria {
+   max-width: 800px;
+   padding: 20px;
+   border: 3px #ffffff solid;
+   border-image: linear-gradient(45deg, #ff8800, var(--light-color-acento-1), #8B5CF6) 3;
+   background-color: rgba(10, 10, 30, 0.6);
+   box-shadow: 0 0 15px rgba(255, 20, 147, 0.3);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   cursor: pointer;
+}
+
+.articulo-categoria:hover {
+   transform: scale(1.03);
+   border: 3px solid #08d6fa;
+    box-shadow: 0 0 20px #08d6fa;
+   /*  border-image: linear-gradient(120deg,#00D9FF,var(--light-color-acento-1)) 2;*/
+}
+
+.articulo-categoria.clicked {
+   transform: scale(0.95);
+   box-shadow: 0 0 35px rgba(255, 0, 127, 0.6);
+}
+
+/*TITULOS DE LOS VIDEOJUEGOS */
+.item-valor-nombre {
+   font-family: "IBM Plex Sans", sans-serif;
+   font-style: oblique;
+   padding: 15px;
+   margin: 20px auto;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 10px;
+   font-size: 20px;
+   font-weight: 800;
+   background: rgba(10, 10, 30, 0.425);
+   box-shadow: 0 0 15px rgba(255, 20, 147, 0.3);
+}
+
+
+/*AUTOR DEL VIDEOJUEGO*/
+.item-valor-autor {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-decoration: underline;
+   color: #c0bebe;
+
+}
+
+/* IMAGEN PORTADA VIDEOJUEGOS*/
+.item-valor-portada {
+   width: 280px;
+   height: 325px;
+   border-radius: 15px;
+   display: block;
+   margin: auto;
+
+}
+
+/* Descripción de los VIDEOJUEGOS */
+.item-valor-descripcion {
+   margin: 20px 0;
+   font-size: 16px;
+   line-height: 1.6;
+   color: #cfcfcf;
+   text-align: justify;
+   padding: 10px 15px;
+   background: rgba(255, 255, 255, 0.05);
+   border-left: 3px solid #ff007f;
+   border-radius: 8px;
+   box-shadow: 0 0 10px rgba(255, 0, 127, 0.3);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-valor-descripcion:hover {
+   transform: translateY(-4px);
+   box-shadow: 0 0 20px rgba(255, 0, 127, 0.6);
+}
+
+/* RATING de los videojuegos */
+.item-valor-rating {
+   text-align: center;
+   color: #ffdf00;
+   font-size: 20px;
+   font-weight: bold;
+   margin-top: 10px;
+   text-shadow: 0 0 10px #ffdf00;
+}
+
+
+
+
+
+/* CONTENEDOR de DETALLES DEL ARTÍCULO */
+.detalle-articulo {
+   background: linear-gradient(135deg, #1c1c1c, #292929);
+   color: #f5f5f5;
+   min-height: 3em;
+   padding: 20px;
+   border-radius: 12px;
+   border: 3px #ffffff solid;
+   border-image: linear-gradient(45deg, #ff8800, var(--light-color-acento-1), #8B5CF6) 3;
+   background-color: rgba(10, 10, 30, 0.6);
+   box-shadow: 0 0 15px rgba(255, 20, 147, 0.3);
+   transition: 0.3s ease;
+}
+
+/* MUESTRA AL COLOCAR MOUSE EN DETALLES*/
+.detalle-articulo:hover {
+   border-color: #08d6fa;
+   box-shadow: 0 0 25px rgba(255, 0, 255, 0.5);
+}
+
+/*VALOR DE LOS CAMPOS ej MODO DE JUEGO*/
+.detalle-articulo h4 {
+   font-size: 17px;
+   color: #f7f7f7;
+   margin-bottom: 6px;
+   margin-top: 18px;
+   border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+   padding-bottom: 4px;
+   text-transform: uppercase;
+   letter-spacing: 0.5px;
+}
+
+.detalle-articulo p {
+   font-size: 15px;
+   color: #ddd;
+   margin: 4px 0 10px 10px;
+   padding-left: 5px;
+   border-left: 3px solid rgba(255, 0, 255, 0.3);
+   line-height: 1.5;
+   transition: 0.3s ease;
+}
+
+.detalle-articulo p:hover {
+   color: #fff;
+   border-left-color: #08d6fa
+}
+
+/* Espaciado general entre descripción y rating */
+.item-valor-descripcion,
+.item-valor-rating {
+   margin: 12px 0;
+}
+
+.item-valor-descripcion span,
+.item-valor-rating span {
+   color: #ffdf00;
+}
+
+
+
+
+
+
+
+/* PArte de arriba del articulo*/
+.header-articulo p {
+   padding: 20px;
+
+}
+
+
+
+/* ========== FOOTER ========== */
+.footer {
+   background: rgba(10, 10, 20, 0.7);
+   border-top: 2px solid #FF1654;
+   color: white;
+   padding: 30px 20px;
+   text-align: center;
+   font-family: "IBM Plex Sans", sans-serif;
+}
+
+.footer-contenido {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   max-width: 1100px;
+   margin: auto;
+   gap: 20px;
+}
+
+.footer-logo img {
+   width: 60px;
+}
+
+.footer-logo h3 {
+   color: #FF1654;
+   font-family: "Orbitron", sans-serif;
+   margin: 10px 0 0;
+}
+
+.footer-links a {
+   margin: 0 10px;
+   color: #FF1654;
+   text-decoration: none;
+   font-weight: bold;
+}
+
+.footer-links a:hover {
+   color: #00A7E1;
+}
+
+.footer-redes a {
+   margin: 0 10px;
+   font-size: 20px;
+   color: #FF1654;
+   transition: color 0.3s;
+}
+
+.footer-redes a:hover {
+   color: #00A7E1;
+}
+
+.footer-copy {
+   font-size: 13px;
+   color: #ccc;
+   margin-top: 25px;
+}
+
+
+
+/* TABLET (menor a 1180) */
+@media screen and (max-width: 1180px) {
+   #seccion-categoria {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      /* un poco menos de espacio */
+      padding: 50px 20px;
+   }
+
+   #seccion-categoria img {
+      width: 100%;
+      height: auto;
+   }
+}
+
+/* CELULARES (menor a 750px) */
+@media screen and (max-width: 750px) {
+   #seccion-categoria {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 30px 15px;
+   }
+
+
+
+   #seccion-categoria img {
+      width: 100%;
+      height: auto;
+   }
+}
+
+/*estilo categoria 2*/
+.categoria2:hover{
+   color: #08fa51;
+    transform: scale(1.03);
+   border: 3px solid #08fa51;
+    box-shadow: 0 0 20px #08fa51;
+}
+.categoria3:hover{
+   color: #fa088d;
+    transform: scale(1.03);
+   border: 3px solid #fa08a9;
+    box-shadow: 0 0 20px #fa08a9;
+}
+.categoria4:hover{
+   color: #faea08;
+    transform: scale(1.03);
+   border: 3px solid #faea08;
+    box-shadow: 0 0 20px #faea08;
+}
+.categoria5:hover{
+   color: #fa0808;
+    transform: scale(1.03);
+   border: 3px solid #fa0808;
+    box-shadow: 0 0 20px #fa0808;
+}
