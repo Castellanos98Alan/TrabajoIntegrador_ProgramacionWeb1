@@ -204,7 +204,7 @@ body::after {
    transform: translateY(-50%);
    z-index: 10;
    cursor: pointer;
-   background: rgba(255, 22, 84, 0.9);
+   background: #ff00806e;
    border-radius: 50%;
    padding: 10px;
    transition: background 0.3s;
@@ -565,4 +565,10 @@ body::after {
     transform: scale(1.03);
    border: 3px solid #fa0808;
     box-shadow: 0 0 20px #fa0808;
+}
+
+button{
+
+background: none;
+border: none;
 }

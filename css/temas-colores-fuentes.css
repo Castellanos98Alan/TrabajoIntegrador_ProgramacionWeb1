@@ -15,14 +15,57 @@
    --dark-color-acento-1: #FF1491;
    --dark-color-acento-2: #00a7e1;
    --dark-color-acento-3: #8B5CF6;
+
+      /* Tarjetas / bordes */
+   --card-bg: rgba(10, 10, 30, 0.6);
+   --card-border: #08d6fa;
+   /* MODO CLARO */
+   --light-bg-primario: #F2F4F8;
+   --light-bg-secundario: #cac8c8;
+   --light-texto-principal: #1A1A1A;
+   --light-texto-secundario: #555555;
+   --bg-extra: #E9EBF2;
+
+   --light-card-bg: #FFFFFF;
+   --light-card-border: #00C8FF;
 }
 
  .light-theme {
-   color: var(--light-color-texto);
-   background-color: var(--light-color-fondo);
+   color: var(--light-texto-principal);
+   background-color: var(light-bg-primario);
 }
 
 .dark-theme {
    color: var(--dark-color-texto);
    background-color: var(--dark-color-fondo);
+}
+.bodyClaro {
+   background: linear-gradient(135deg, var(--light--bg-primario) 0%, var(--light--bg-secundario) 50%, var(--light--bg-extra) 100%);
+   color: var(--light--texto-principal);
+   transition: background 0.4s, color 0.4s;
+}
+.articulo-categoria-claro {
+   background-color: var(--light--card-bg);
+   border: 3px solid var(--light--card-border);
+   transition: background-color 0.3s, border 0.3s, box-shadow 0.3s;
+}
+.sin-fondo{
+   background: transparent !important;
+   background-color: transparent !important;
+   box-shadow: none !important;
+   border: none !important;
+}
+
+.letras-modo-claro {
+   color: var(--light--texto-principal);
+   transition: color 0.3s;
+}
+.encabezado-principal-claro {
+   background-color: var(---light-bg-secundario);
+   backdrop-filter: blur(10px);
+   border-bottom: 2px solid #FF1654;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px 40px;
 }

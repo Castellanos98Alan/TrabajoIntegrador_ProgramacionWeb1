@@ -9,6 +9,7 @@
    <link rel="stylesheet" href="css/temas-colores-fuentes.css">
    <link rel="stylesheet" href="css/estilos-principal.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="/css/temas-colores-fuentes.css">
 </head>
 
 <body>
@@ -19,22 +20,27 @@
          <img src="../assets/img/LogoRosaFluor.png" alt="Logo VideoGames">
       </a>
 
+
+
       <div id="encabezado-principal-buscador">
          <input type="search" name="buscador" placeholder= "Buscar por nombre, autor o descripción...">
          <img src="../assets/img/LupaRosa.png" alt="Buscar">
       </div>
 
       <div class="encabezado-principal-derecha">
-         <a href="/html/datos-personales.html" title="Icono Ajustes">
-            <img src="" alt="Icono de Ajustes" class="img-ajustes" />
-         </a>
-
+       
          <!-- agregar icono favoritos -->
 
          <a href="/html/login.html" title="Mi Perfil">
             <img src="assets/img/login_24dp_FF1491_FILL0_wght400_GRAD0_opsz24.png" alt="Icono de Perfil"
                class="img-login" />
+
+          <a href="/html/datos-personales.html" title="Icono Ajustes">
+            <img src="/assets/img/logo-ajuste.png" alt="Icono de Ajustes" class="img-ajustes" />
          </a>
+
+         <button id="modo-oscuro"><img src="/assets/img/modo-oscuro.png" alt=""></button>
+         
       </div>
    </header>
    <!-- Navegacion entre Categorias -->
@@ -79,6 +85,7 @@
       </div>
 
       <section id="seccion-categoria">
+         
          <article id="categoria00-item01" class="articulo-categoria item01">
             <header class="header-articulo">
                <p class="item-valor-nombre"><span style="font-weight:bold;text-transform:uppercase;">Nombre</span> ITEM
@@ -423,7 +430,9 @@
 
    <!-- INICIO | NO MODIFICAR/NO QUITAR: 'cargar-datos.js' realiza la carga de datos -->
    <script type="module" src="./js/cargar-datos.js"></script>
+
    <!-- FIN | NO MODIFICAR/NO QUITAR: 'cargar-datos.js' realiza la carga de datos -->
+    <script src="/js/modo-oscuro.js"></script>
 </body>
 
 </html>
