@@ -20,34 +20,31 @@
          <img src="../assets/img/LogoRosaFluor.png" alt="Logo VideoGames">
       </a>
 
-
-
       <div id="encabezado-principal-buscador">
-         <input type="search" name="buscador" placeholder= "Buscar por nombre, autor o descripción...">
+         <input type="search" id="buscador" name="buscador" placeholder="Buscar por nombre, autor o descripción...">
          <img src="../assets/img/LupaRosa.png" alt="Buscar">
       </div>
 
       <div class="encabezado-principal-derecha">
-       
-         <!-- agregar icono favoritos -->
 
          <a href="/html/login.html" title="Mi Perfil">
             <img src="assets/img/login_24dp_FF1491_FILL0_wght400_GRAD0_opsz24.png" alt="Icono de Perfil"
                class="img-login" />
 
-          <a href="/html/datos-personales.html" title="Icono Ajustes">
-            <img src="/assets/img/logo-ajuste.png" alt="Icono de Ajustes" class="img-ajustes" />
-         </a>
+            <a href="/html/datos-personales.html" title="Icono Ajustes">
+               <img src="/assets/img/logo-ajuste.png" alt="Icono de Ajustes" class="img-ajustes" />
+            </a>
 
-         <button id="modo-oscuro"><img src="/assets/img/modo-oscuro.png" alt="" class="img-modo"></button>
-         
+            <button id="modo-oscuro"><img src="/assets/img/modo-oscuro.png" alt="" class="img-modo"></button>
+
       </div>
    </header>
+
    <!-- Navegacion entre Categorias -->
    <main>
       <nav id="navegacion-categoria">
          <!-- 🔹 Botón toggle favoritos -->
-   <button id="btn-favoritos">⭐ Mis favoritos</button>
+         <button id="btn-favoritos">⭐ Mis favoritos</button>
          <a href="#" id="tab-categoria-1" class="tab-categoria">RPG (Role-Playing Game)</a>
          <a href="#" id="tab-categoria-2" class="tab-categoria">Survival</a>
          <a href="#" id="tab-categoria-3" class="tab-categoria">Shooter (FPS / TPS)</a>
@@ -74,7 +71,7 @@
 
          <script type="module" src="js/carrusel.js"></script>
       </header>
-      
+
       <section id="seccion-filtros">
       </section>
 
@@ -87,7 +84,7 @@
       </div>
 
       <section id="seccion-categoria">
-         
+
          <article id="categoria00-item01" class="articulo-categoria item01">
             <header class="header-articulo">
                <p class="item-valor-nombre"><span style="font-weight:bold;text-transform:uppercase;">Nombre</span> ITEM
@@ -95,7 +92,7 @@
                <p class="item-valor-autor"><span style="font-weight:bold;text-transform:uppercase;">Autor</span> ITEM 1
                </p>
 
-                <i class="fa-regular fa-star estrella-favorito" title="Marcar como favorito"></i>
+               <i class="fa-regular fa-star estrella-favorito" title="Marcar como favorito"></i>
 
                <img class="item-valor-portada" src="./assets/img/categoria00-item01.png" alt='Imagen de Portada'>
                <p class="item-valor-descripcion"><span
@@ -126,7 +123,7 @@
 
                <i class="fa-regular fa-star estrella-favorito" title="Marcar como favorito"></i>
 
-                
+
                <img class="item-valor-portada" src='assets/img/categoria00-item02.png' alt='Imagen de Portada'>
                <p class="item-valor-descripcion"><span
                      style="font-weight:bold;text-transform:uppercase;">DescripciÃ³n</span> ITEM 2</p>
@@ -184,7 +181,7 @@
                <p class="item-valor-autor"><span style="font-weight:bold;text-transform:uppercase;">Autor</span> ITEM 4
                </p>
 
-              <i class="fa-regular fa-star estrella-favorito" title="Marcar como favorito"></i>
+               <i class="fa-regular fa-star estrella-favorito" title="Marcar como favorito"></i>
 
                <img class="item-valor-portada" src='assets/img/categoria00-item04.png' alt='Imagen de Portada'>
                <p class="item-valor-descripcion"><span
@@ -271,9 +268,9 @@
                <p class="item-valor-autor"><span style="font-weight:bold;text-transform:uppercase;">Autor</span> ITEM 7
                </p>
 
-            <i class="fa-regular fa-star estrella-favorito" title="Marcar como favorito"></i>
+               <i class="fa-regular fa-star estrella-favorito" title="Marcar como favorito"></i>
 
-               
+
                <img class="item-valor-portada" src='assets/img/categoria00-item07.png' alt='Imagen de Portada'>
                <p class="item-valor-descripcion"><span
                      style="font-weight:bold;text-transform:uppercase;">DescripciÃ³n</span> ITEM 7</p>
@@ -473,9 +470,9 @@
    <script type="module" src="./js/cargar-datos.js"></script>
 
    <!-- FIN | NO MODIFICAR/NO QUITAR: 'cargar-datos.js' realiza la carga de datos -->
-    <script src="/js/modo-oscuro.js"></script>
+   <script src="/js/modo-oscuro.js"></script>
 
-    <script src="./js/favoritos.js"></script>
+   <script src="./js/favoritos.js"></script>
 </body>
 
 </html>

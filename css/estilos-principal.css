@@ -590,3 +590,13 @@ border: none;
   color: pink; 
 }
 
+/*cuando google da una sugerencia y se elije esa opción el fondo del input se pone en blanco, con esto ya no.*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+   background-color: rgba(255, 255, 255, 0) !important;
+   -webkit-box-shadow: 0 0 0 1000px rgba(255,255,255,0) inset !important; 
+   -webkit-text-fill-color: white !important;
+   transition: background-color 5000s ease-in-out 0s;
+}
+

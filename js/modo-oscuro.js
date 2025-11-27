@@ -7,6 +7,7 @@ let h1 = document.querySelectorAll("h1")
 const encabezado = document.getElementById("encabezado-principal")
 const categoria = document.getElementById("seccion-categoria")
 const tituloCategoria =  document.querySelector(".container-titulo-seccion-categoria")
+let input=  document.getElementById("buscador")
 
 btn.addEventListener("click",function(){
    document.body.classList.toggle("bodyClaro")
@@ -29,6 +30,6 @@ btn.addEventListener("click",function(){
    tituloCategoria.classList.toggle("sin-fondo")
    categoria.classList.toggle("sin-fondo")
    encabezado.classList.toggle("sin-fondo")
-   
-   
+  input.classList.toggle("letras-modo-claro")
+
 })
