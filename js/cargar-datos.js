@@ -28,9 +28,27 @@ linksCategorias.forEach((linkCategoria) => {
          });
 
          articuloContenedor.id = Id;
+
+         // el artículo sabe de qué categoría es (RPG / Survival / Shooter / etc)
+         articuloContenedor.dataset.categoria = Categoria;
+
+         // la estrella sabe qué juego es (Id viene del JSON: "categoria00-item01", "categoria01-item05", etc.)
+         const estrella = articuloContenedor.querySelector(".estrella-favorito");
+         if (estrella) {
+            estrella.dataset.id = Id;
+         }
+
+         articuloContenedor.id = Id;
+      });
+
+      // Aviso al JS de favoritos para que re-pinte las estrellas según lo guardado
+      if (window.actualizarFavoritos) {
+         window.actualizarFavoritos();
+      }
+         
       });
    });
-});
+;
 
 if (configuracion["modo-test-prod"] === "prod") {
    tabCategoria1.click();
@@ -121,6 +139,8 @@ const tabs = document.querySelectorAll(".tab-categoria");
          }
       });
    });
+
+
 
 
 

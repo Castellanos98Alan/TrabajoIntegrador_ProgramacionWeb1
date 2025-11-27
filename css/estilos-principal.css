@@ -572,3 +572,21 @@ button{
 background: none;
 border: none;
 }
+
+
+.estrella-favorito {
+  cursor: pointer;
+  font-size: 1.6rem;
+  margin-left: 8px;
+  color: #ccc; /* estrella apagada */
+}
+
+.estrella-favorito.favorito {
+  color: gold; /* estrella marcada */
+}
+
+/* color normal */
+#btn-favoritos {
+  color: pink; 
+}
+
