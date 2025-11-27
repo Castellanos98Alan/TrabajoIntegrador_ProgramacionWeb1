@@ -112,6 +112,7 @@ body::after {
 
 }
 
+
 .encabezado-principal-derecha {
    display: flex;
    align-items: center;
@@ -568,7 +569,6 @@ body::after {
 }
 
 button{
-
 background: none;
 border: none;
 }
