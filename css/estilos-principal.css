@@ -106,10 +106,15 @@ body::after {
    margin-left: 10px;
 }
 
-.img-login, .img-ajustes {
-   width: 40px;
+.img-login, .img-ajustes, .img-modo {
+   width: 35px;
    transition: transform 0.3s;
 
+}
+
+.img-modo:hover {
+   transform: scale(1.1);
+   cursor: pointer;
 }
 
 
@@ -140,9 +145,10 @@ body::after {
    font-size: 20px;
    font-weight: 900;
    text-decoration: none;
+   text-align: center;
 }
 
-.tab-categoria:hover {
+.tab-categoria:hover, #btn-favoritos:hover {
    color: var(--light-color-acento-1);
    text-decoration: underline;
 
@@ -524,6 +530,16 @@ body::after {
       width: 100%;
       height: auto;
    }
+
+   #navegacion-categoria{
+      gap: 60px;
+   }
+
+   .tab-categoria{
+      font-size: 15px;
+   }
+
+
 }
 
 /* CELULARES (menor a 750px) */
@@ -534,12 +550,35 @@ body::after {
       padding: 30px 15px;
    }
 
-
-
    #seccion-categoria img {
       width: 100%;
       height: auto;
    }
+
+   #navegacion-categoria{
+      gap: 20px;
+      flex-direction: column;
+      padding: 20px;
+   }
+
+   #encabezado-principal{
+      flex-direction: column;
+   }
+
+   .img-login, .img-ajustes, .img-modo {
+      width: 30px;
+   }
+
+   #encabezado-principal-buscador{
+      margin-bottom: 20px;
+      width: 80%;
+   }
+
+   .footer-contenido{
+      flex-direction: column;
+   }
+
+
 }
 
 /*estilo categoria 2*/
@@ -588,6 +627,7 @@ border: none;
 /* color normal */
 #btn-favoritos {
   color: pink; 
+  cursor: pointer;
 }
 
 /*cuando google da una sugerencia y se elije esa opción el fondo del input se pone en blanco, con esto ya no.*/

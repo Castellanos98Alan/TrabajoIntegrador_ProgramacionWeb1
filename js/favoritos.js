@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
         btnFavoritos.textContent = "👀 Ver todos";
       } else {
         mostrandoSoloFavoritos = false;
-        btnFavoritos.textContent = "⭐ Mis favoritos";
+        btnFavoritos.textContent = "★ Mis favoritos";
       }
 
       actualizarTodo();

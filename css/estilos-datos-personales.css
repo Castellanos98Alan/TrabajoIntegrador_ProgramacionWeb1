@@ -118,6 +118,7 @@ body::after {
   font-size: 16px;
   color: white;
   background: transparent;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #encabezado-principal-buscador img {
@@ -197,9 +198,13 @@ h2 {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 16px;
   background: #b3b0b0;
-  width: 100%;
+  width: 90%;
   color: #000000;
+  text-align: left;
+}
 
+.input-text::placeholder {
+  text-align: left;
 }
 
 
@@ -329,12 +334,24 @@ h2 {
 /* CELULARES */
 @media screen and (max-width: 750px) {
   .card {
-    width: 90%;
+    width: 80%;
     padding: 25px;
   }
 
   .fila {
     flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+    align-items: center;
+    
+  }
+
+  .fila input,
+  .fila select {
+    padding: 12px 80px;       
+    width: 100%; 
+    box-sizing: border-box;
+    
   }
 
   #encabezado-principal {
@@ -345,4 +362,8 @@ h2 {
   #encabezado-principal-buscador {
     width: 90%;
   }
+
+  .footer-contenido{
+      flex-direction: column;
+   }
 }
